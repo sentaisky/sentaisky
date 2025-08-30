@@ -1,0 +1,117 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PANEL",
+    "meta": {
+        "version": "PLCN_v2",
+        "update_url": null
+    },
+    "exported_at": "2025-08-30T04:53:29+00:00",
+    "name": "Velocity",
+    "author": "parker@parkervcp.com",
+    "uuid": "44d20b6d-0a20-4144-a96c-71d214b3c850",
+    "description": null,
+    "tags": [
+        "MINECRAFT",
+        "PROXY"
+    ],
+    "features": [
+        "eula",
+        "java_version",
+        "pid_limit",
+        "host_network"
+    ],
+    "docker_images": {
+        "Java 21": "ghcr.io/pterodactyl/yolks:java_21",
+        "Java 17": "ghcr.io/pterodactyl/yolks:java_17",
+        "Java 16": "ghcr.io/pterodactyl/yolks:java_16",
+        "Java 11": "ghcr.io/pterodactyl/yolks:java_11",
+        "Java 8": "ghcr.io/pterodactyl/yolks:java_8",
+        "Java 22": "ghcr.io/parkervcp/yolks:java_22"
+    },
+    "file_denylist": [],
+    "startup": "java -Xms{{Sel_XMS}}M -Xmx{{SERVER_MEMORY}}M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=50 -XX:+AlwaysPreTouch -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:InitiatingHeapOccupancyPercent=15 -XX:MaxInlineLevel=15 -Dfile.encoding=UTF-8 -jar {{SERVER_JARFILE}}",
+    "config": {
+        "files": "{\n    \"velocity.toml\": {\n        \"parser\": \"file\",\n        \"find\": {\n            \"bind = \": \"bind = \\\"0.0.0.0:{{server.allocations.default.port}}\\\"\"\n        }\n    }\n}",
+        "startup": "{\n    \"done\": \"Done (\"\n}",
+        "logs": "{}",
+        "stop": "end"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!/bin/ash\r\n# Velocity Proxy Installation Script\r\n#\r\n# Server Files: /mnt/server\r\nPROJECT=velocity\r\n\r\nif [[ -z ${VELOCITY_VERSION} ]] || [[ ${VELOCITY_VERSION} == \"latest\" ]]; then\r\n    VELOCITY_VERSION=\"latest\"\r\nfi\r\n\r\nif [[ -n \"${DOWNLOAD_LINK}\" ]]; then\r\n    echo -e \"Using supplied download url: ${DOWNLOAD_LINK}\"\r\n    DOWNLOAD_URL=$(eval echo $(echo ${DL_PATH} | sed -e 's/{{/${/g' -e 's/}}/}/g'))\r\nelse\r\n    VER_EXISTS=$(curl -s https://api.papermc.io/v2/projects/${PROJECT} | jq -r --arg VERSION $VELOCITY_VERSION '.versions[] | contains($VERSION)' | grep true)\r\n    LATEST_VERSION=$(curl -s https://api.papermc.io/v2/projects/${PROJECT} | jq -r '.versions' | jq -r '.[-1]')\r\n\r\nif [[ \"${VER_EXISTS}\" == \"true\" ]]; then\r\n    echo -e \"Version is valid. Using version ${VELOCITY_VERSION}\"\r\nelse\r\n    echo -e \"Using the latest ${PROJECT} version\"\r\n    VELOCITY_VERSION=${LATEST_VERSION}\r\nfi\r\n\r\nBUILD_EXISTS=$(curl -s https://api.papermc.io/v2/projects/${PROJECT}/versions/${VELOCITY_VERSION} | jq -r --arg BUILD ${BUILD_NUMBER} '.builds[] | tostring | contains($BUILD)' | grep true)\r\nLATEST_BUILD=$(curl -s https://api.papermc.io/v2/projects/${PROJECT}/versions/${VELOCITY_VERSION} | jq -r '.builds' | jq -r '.[-1]')\r\n\r\nif [[ \"${BUILD_EXISTS}\" == \"true\" ]]; then\r\n    echo -e \"Build is valid for version ${VELOCITY_VERSION}. Using build ${BUILD_NUMBER}\"\r\nelse\r\n    echo -e \"Using the latest ${PROJECT} build for version ${VELOCITY_VERSION}\"\r\n    BUILD_NUMBER=${LATEST_BUILD}\r\nfi\r\n\r\nJAR_NAME=${PROJECT}-${VELOCITY_VERSION}-${BUILD_NUMBER}.jar\r\necho \"Version being downloaded\"\r\necho -e \"Velocity Version: ${VELOCITY_VERSION}\"\r\necho -e \"Build: ${BUILD_NUMBER}\"\r\necho -e \"JAR Name of Build: ${JAR_NAME}\"\r\nDOWNLOAD_URL=https://api.papermc.io/v2/projects/${PROJECT}/versions/${VELOCITY_VERSION}/builds/${BUILD_NUMBER}/downloads/${JAR_NAME}\r\n\r\nfi\r\n\r\ncd /mnt/server\r\necho -e \"Running curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}\"\r\n\r\nif [[ -f ${SERVER_JARFILE} ]]; then\r\nmv ${SERVER_JARFILE} ${SERVER_JARFILE}.old\r\nfi\r\n\r\ncurl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}\r\n\r\nif [[ -f velocity.toml ]]; then\r\n    echo -e \"velocity config file exists\"\r\nelse\r\n    echo -e \"downloading velocity config file.\"\r\n    curl https://raw.githubusercontent.com/parkervcp/eggs/master/game_eggs/minecraft/proxy/java/velocity/velocity.toml -o velocity.toml\r\nfi\r\n\r\nif [[ -f forwarding.secret ]]; then\r\n    echo -e \"velocity forwarding secret file already exists\"\r\nelse\r\n    echo -e \"creating forwarding secret file\"\r\n    touch forwarding.secret\r\n    date +%s | sha256sum | base64 | head -c 12 > forwarding.secret\r\nfi\r\n\r\necho -e \"install complete\"",
+            "container": "ghcr.io/parkervcp/installers:alpine",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": [
+        {
+            "sort": 1,
+            "name": "Velocity Version",
+            "description": "Die Velocity Version die heruntergeladen werden soll.\n\nVerwende 'latest ' f\u00fcr die aktuellste Stabile Version.",
+            "env_variable": "VELOCITY_VERSION",
+            "default_value": "latest",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "required",
+                "string",
+                "max:20"
+            ]
+        },
+        {
+            "sort": 2,
+            "name": "Server Jar File",
+            "description": "Server Jarfile, standardm\u00e4\u00dfig ist dies auf 'velocity.jar' eingestellt.\nSetzen Sie ihn auf einen anderen Wert, wenn Sie einen anderen Jarfile-Namen haben m\u00f6chten.",
+            "env_variable": "SERVER_JARFILE",
+            "default_value": "velocity.jar",
+            "user_viewable": true,
+            "user_editable": false,
+            "rules": [
+                "required",
+                "string",
+                "max:32",
+                "regex:/^([\\w\\d._-]+)(\\.jar)$/"
+            ]
+        },
+        {
+            "sort": 3,
+            "name": "Download Path",
+            "description": "Eine URL, die zum Herunterladen einer server.jar anstelle der im Installationsskript enthaltenen verwendet wird. Diese ist f\u00fcr den Benutzer nicht sichtbar.",
+            "env_variable": "DL_PATH",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": [
+                "nullable",
+                "string"
+            ]
+        },
+        {
+            "sort": 4,
+            "name": "Build Number",
+            "description": "Die Build-Nummer f\u00fcr die Velocity-Version.\n\nBelassen Sie es bei latest, um immer die neueste Version zu erhalten. Bei ung\u00fcltigen Versionen wird standardm\u00e4\u00dfig die neueste Version verwendet.",
+            "env_variable": "BUILD_NUMBER",
+            "default_value": "latest",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "required",
+                "string",
+                "max:20"
+            ]
+        },
+        {
+            "sort": 5,
+            "name": "XMS RAM",
+            "description": "W\u00e4hle eine XMS Ram Menge aus, die das minimum an RAM Last festlegt.\n\nEmpfohlen wird meistens eta 25%-50% vom maximal m\u00f6glichen RAM",
+            "env_variable": "Sel_XMS",
+            "default_value": "512",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "required",
+                "numeric",
+                "in:128,256,512,1024,2048,3072,4096"
+            ]
+        }
+    ]
+}
