@@ -1,0 +1,180 @@
+_comment: 'DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PANEL'
+meta:
+  version: PLCN_v3
+  update_url: 'https://raw.githubusercontent.com/lultwo/sentaisky/refs/heads/simp/PelicanEggs/egg-velocity.json'
+exported_at: '2025-11-26T23:03:59+00:00'
+name: Velocity
+author: lul.two@skygamez.de
+uuid: 44d20b6d-0a20-4144-a96c-71d214b3c850
+description: null
+image: 'data:image/png;base64,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'
+tags:
+  - MINECRAFT
+  - PROXY
+features:
+  - eula
+  - java_version
+  - pid_limit
+docker_images:
+  'Java 22': 'ghcr.io/parkervcp/yolks:java_22'
+  'Java 21': 'ghcr.io/pterodactyl/yolks:java_21'
+  'Java 17': 'ghcr.io/pterodactyl/yolks:java_17'
+  'Java 16': 'ghcr.io/pterodactyl/yolks:java_16'
+  'Java 11': 'ghcr.io/pterodactyl/yolks:java_11'
+  'Java 8': 'ghcr.io/pterodactyl/yolks:java_8'
+file_denylist: {  }
+startup_commands:
+  Optimiert: 'java -Xms{{Sel_XMS}}M -Xmx{{SERVER_MEMORY}}M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:+UnlockExperimentalVMOptions -XX:G1HeapRegionSize=4M -XX:G1ReservePercent=20 -XX:InitiatingHeapOccupancyPercent=30 -Dfile.encoding=UTF-8 -jar {{SERVER_JARFILE}}'
+  Klassisch: 'java -Xms{{Sel_XMS}}M -Xmx{{SERVER_MEMORY}}M -jar velocity.jar'
+config:
+  files:
+    velocity.toml:
+      parser: file
+      find:
+        'bind = ': 'bind = "0.0.0.0:{{server.allocations.default.port}}"'
+  startup:
+    done: 'Done ('
+  logs: {  }
+  stop: end
+scripts:
+  installation:
+    script: |-
+      #!/bin/ash
+      # Velocity Proxy Installation Script
+      #
+      # Server Files: /mnt/server
+      PROJECT=velocity
+
+      if [[ -z ${VELOCITY_VERSION} ]] || [[ ${VELOCITY_VERSION} == "latest" ]]; then
+          VELOCITY_VERSION="latest"
+      fi
+
+      if [[ -n "${DOWNLOAD_LINK}" ]]; then
+          echo -e "Using provided download URL: ${DOWNLOAD_LINK}"
+          DOWNLOAD_URL=$(eval echo $(echo ${DL_PATH} | sed -e 's/{{/${/g' -e 's/}}/}/g'))
+      else
+          VER_EXISTS=$(curl -s https://api.papermc.io/v2/projects/${PROJECT} | jq -r --arg VERSION $VELOCITY_VERSION '.versions[] | contains($VERSION)' | grep true)
+          LATEST_VERSION=$(curl -s https://api.papermc.io/v2/projects/${PROJECT} | jq -r '.versions' | jq -r '.[-1]')
+
+      if [[ "${VER_EXISTS}" == "true" ]]; then
+          echo -e "Version is valid. Using version ${VELOCITY_VERSION}."
+      else
+          echo -e "No valid version provided. Using latest ${PROJECT} version."
+          VELOCITY_VERSION=${LATEST_VERSION}
+      fi
+
+      BUILD_EXISTS=$(curl -s https://api.papermc.io/v2/projects/${PROJECT}/versions/${VELOCITY_VERSION} | jq -r --arg BUILD ${BUILD_NUMBER} '.builds[] | tostring | contains($BUILD)' | grep true)
+      LATEST_BUILD=$(curl -s https://api.papermc.io/v2/projects/${PROJECT}/versions/${VELOCITY_VERSION} | jq -r '.builds' | jq -r '.[-1]')
+
+      if [[ "${BUILD_EXISTS}" == "true" ]]; then
+          echo -e "Build is valid for version ${VELOCITY_VERSION}. Using build ${BUILD_NUMBER}."
+      else
+          echo -e "No valid build provided. Using latest build for version ${VELOCITY_VERSION}."
+          BUILD_NUMBER=${LATEST_BUILD}
+      fi
+
+      JAR_NAME=${PROJECT}-${VELOCITY_VERSION}-${BUILD_NUMBER}.jar
+      echo "Resolved download target:"
+      echo -e "Velocity version: ${VELOCITY_VERSION}"
+      echo -e "Build: ${BUILD_NUMBER}"
+      echo -e "Artifact: ${JAR_NAME}"
+      DOWNLOAD_URL=https://api.papermc.io/v2/projects/${PROJECT}/versions/${VELOCITY_VERSION}/builds/${BUILD_NUMBER}/downloads/${JAR_NAME}
+
+      fi
+
+      cd /mnt/server
+      echo -e "Downloading: curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}"
+
+      if [[ -f ${SERVER_JARFILE} ]]; then
+          mv ${SERVER_JARFILE} ${SERVER_JARFILE}.old
+      fi
+
+      curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
+
+      if [[ -f velocity.toml ]]; then
+          echo -e "Found existing velocity.toml"
+      else
+          echo -e "Downloading default velocity.toml"
+          curl https://raw.githubusercontent.com/parkervcp/eggs/master/game_eggs/minecraft/proxy/java/velocity/velocity.toml -o velocity.toml
+      fi
+
+      if [[ -f forwarding.secret ]]; then
+          echo -e "Forwarding secret already present"
+      else
+          echo -e "Creating forwarding secret"
+          touch forwarding.secret
+          date +%s | sha256sum | base64 | head -c 12 > forwarding.secret
+      fi
+
+      echo -e "Installation complete."
+    container: 'ghcr.io/parkervcp/installers:alpine'
+    entrypoint: ash
+variables:
+  -
+    sort: 4
+    name: 'Build Number'
+    description: |-
+      Build-Nummer für die angegebene Velocity-Version. Relasse „latest“, um automatisch den neuesten
+      Build zu verwenden. Bei ungültigen Angaben wird der neueste Build gewählt.
+    env_variable: BUILD_NUMBER
+    default_value: latest
+    user_viewable: true
+    user_editable: true
+    rules:
+      - required
+      - string
+      - 'max:20'
+  -
+    sort: 3
+    name: 'Download Path'
+    description: |-
+      URL zum Herunterladen einer server.jar anstelle der im Installationsskript hinterlegten. Für
+      Benutzer nicht sichtbar.
+    env_variable: DL_PATH
+    default_value: ''
+    user_viewable: false
+    user_editable: false
+    rules:
+      - nullable
+      - string
+  -
+    sort: 5
+    name: 'XMS RAM'
+    description: 'Wähle die anfängliche RAM-Größe (Xms) in MB. Empfohlen sind 25–50 % des maximalen RAM.'
+    env_variable: Sel_XMS
+    default_value: 512
+    user_viewable: true
+    user_editable: true
+    rules:
+      - required
+      - numeric
+      - 'in:128,256,512,1024,2048,3072,4096'
+  -
+    sort: 2
+    name: 'Server Jar File'
+    description: |-
+      Name der Server-JAR-Datei. Standard ist „velocity.jar“. Ändere diesen Wert, wenn deine Datei
+      anders heißt.
+    env_variable: SERVER_JARFILE
+    default_value: velocity.jar
+    user_viewable: true
+    user_editable: true
+    rules:
+      - required
+      - string
+      - 'max:32'
+      - 'regex:/^([\w\d._-]+)(\.jar)$/'
+  -
+    sort: 1
+    name: 'Velocity Version'
+    description: |-
+      Die Velocity-Version, die heruntergeladen werden soll. Verwende „latest“, um immer die aktuelle
+      stabile Version zu beziehen.
+    env_variable: VELOCITY_VERSION
+    default_value: latest
+    user_viewable: true
+    user_editable: true
+    rules:
+      - required
+      - string
+      - 'max:20'
