@@ -1,0 +1,223 @@
+_comment: 'DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PANEL'
+meta:
+  version: PLCN_v3
+  update_url: 'https://raw.githubusercontent.com/lultwo/sentaisky/refs/heads/simp/PelicanEggs/egg-velocity.yaml'
+exported_at: '2025-11-26T23:12:02+00:00'
+name: Purpur
+author: lul.two@skygamez.de
+uuid: 49adec15-ccfe-45c3-ac3f-2fc20582739d
+description: null
+image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KIDxkZWZzPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTAwIiB5Mj0iMTAwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgIDxzdG9wIG9mZnNldD0iMTUlIiBzdG9wLWNvbG9yPSIjMjViOGZmIiAvPgogICA8c3RvcCBvZmZzZXQ9Ijg1JSIgc3RvcC1jb2xvcj0iI2ZhMDJmZiIgLz4KICA8L2xpbmVhckdyYWRpZW50PgogPC9kZWZzPgogPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2cpIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuOCI+CiAgPHBhdGggZD0iTTcyLjA5IDEzLjg2TDUzLjE4IDI0LjhsMTguOTMgMTAuOTIgMTguOTEtMTAuOTR6Ii8+CiAgPHBhdGggZD0iTTQ5Ljg3IDEuMDVMMzAuOTUgMTEuOTkgNDkuODggMjIuOSA2OC44IDExLjk3eiIvPgogIDxwYXRoIGQ9Ik0yNy42NyAxMy44OUw4Ljc1IDI0LjgybDE4LjkzIDEwLjkyIDE4LjkxLTEwLjkzeiIvPgogIDxwYXRoIGQ9Ik00OS44OSAyNi43TDMwLjk3IDM3LjY0IDQ5LjkgNDguNTVsMTguOTItMTAuOTN6Ii8+CiAgPHBhdGggZD0iTTcuMTEgMjcuNjdsLjAxIDIxLjg2IDE4LjkzIDEwLjkxLS4wMS0yMS44NXoiLz4KICA8cGF0aCBkPSJNMjkuMzMgNDAuNDlsLjAxIDIxLjg1IDE4LjkzIDEwLjkyLS4wMS0yMS44NXoiLz4KICA8cGF0aCBkPSJNNy4xMiA1My4zMmwuMDEgMjEuODUgMTguOTMgMTAuOTEtLjAxLTIxLjg1eiIvPgogIDxwYXRoIGQ9Ik0yOS4zNCA2Ni4xNGwuMDEgMjEuODVMNDguMjggOTguOWwtLjAxLTIxLjg1eiIvPgogIDxwYXRoIGQ9Ik01MS41NyA5OC45bDE4LjkyLTEwLjkzLS4wMS0yMS44NS0xOC45MiAxMC45M3oiLz4KICA8cGF0aCBkPSJNNzMuNzggODYuMDZMOTIuNyA3NS4xM2wtLjAyLTIxLjg1LTE4LjkxIDEwLjkzeiIvPgogIDxwYXRoIGQ9Ik03My43NiA2MC40MWwxOC45Mi0xMC45My0uMDEtMjEuODUtMTguOTIgMTAuOTN6Ii8+CiAgPHBhdGggZD0iTTUxLjU1IDUxLjRsLjAxIDIxLjg1IDE4LjkxLTEwLjkzLS4wMS0yMS44NXoiLz4KIDwvZz4KPC9zdmc+Cg=='
+tags:
+  - MINECRAFT
+features:
+  - eula
+  - java_version
+  - pid_limit
+docker_images:
+  'Java 22': 'ghcr.io/parkervcp/yolks:java_22'
+  'Java 21': 'ghcr.io/parkervcp/yolks:java_21'
+  'Java 17': 'ghcr.io/parkervcp/yolks:java_17'
+  'Java 16': 'ghcr.io/parkervcp/yolks:java_16'
+  'Java 11': 'ghcr.io/parkervcp/yolks:java_11'
+  'Java 8': 'ghcr.io/parkervcp/yolks:java_8'
+file_denylist: {  }
+startup_commands:
+  Optimiert: 'java --add-modules=jdk.incubator.vector -Xms{{Sel_XMS}}M -Xmx{{SERVER_MEMORY}}M -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication -XX:MaxGCPauseMillis=150 -XX:G1NewSizePercent=25 -XX:G1MaxNewSizePercent=35 -XX:G1ReservePercent=15 -XX:InitiatingHeapOccupancyPercent=30 -XX:+DisableExplicitGC -XX:+PerfDisableSharedMem -XX:+ExitOnOutOfMemoryError -Duser.timezone={{ZONE}} -Dfile.encoding=false -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}'
+  Klassisch: 'java -Xms{{Sel_XMS}}M -Xmx{{SERVER_MEMORY}}M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -Duser.timezone={{ZONE}} -Dfile.encoding=UTF-8 -jar {{SERVER_JARFILE}}'
+  'Optimiert+ ': 'java --add-modules=jdk.incubator.vector -Xms{{Sel_XMS}}M -Xmx{{SERVER_MEMORY}}M -XX:+UnlockExperimentalVMOptions -XX:+AlwaysPreTouch -XX:+UseNUMA -XX:+UseG1GC -XX:G1HeapRegionSize=32M -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication -XX:MaxGCPauseMillis=100 -XX:G1NewSizePercent=20 -XX:G1MaxNewSizePercent=40 -XX:G1ReservePercent=10 -XX:InitiatingHeapOccupancyPercent=20 -XX:+PerfDisableSharedMem -XX:+DisableExplicitGC -XX:+UnlockDiagnosticVMOptions -XX:+TrustFinalNonStaticFields -XX:+ExitOnOutOfMemoryError -Duser.timezone={{ZONE}} -Dfile.encoding=UTF-8 -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}'
+config:
+  files:
+    server.properties:
+      parser: properties
+      find:
+        server-ip: 0.0.0.0
+        server-port: '{{server.allocations.default.port}}'
+        max-players: '{{env.MAX_PLAYER}}'
+        motd: '{{env.MOTD}}'
+        query.port: '{{server.allocations.default.port}}'
+        online-mode: '{{env.ONLINE_MODE}}'
+        bug-report-link: '{{env.BUG-LINK}}'
+  startup:
+    done: ')! For help, type '
+  logs: {  }
+  stop: stop
+scripts:
+  installation:
+    script: |-
+      #!/bin/ash
+      # Purpur Installation Script
+      #
+      # Server Files: /mnt/server
+      PROJECT=purpur
+
+      if [ -n "${DL_PATH}" ]; then
+          echo -e "Using supplied download URL: ${DL_PATH}"
+          DOWNLOAD_URL=`eval echo $(echo ${DL_PATH} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
+      else
+          VER_EXISTS=`curl -s https://api.purpurmc.org/v2/${PROJECT} | jq -r --arg VERSION $MINECRAFT_VERSION '.versions[] | contains($VERSION)' | grep true`
+          LATEST_VERSION=`curl -s https://api.purpurmc.org/v2/${PROJECT} | jq -r '.versions' | jq -r '.[-1]'`
+
+          if [ "${VER_EXISTS}" == "true" ]; then
+              echo -e "Version is valid. Using version ${MINECRAFT_VERSION}."
+          else
+              echo -e "No valid version provided. Using latest ${PROJECT} version."
+              MINECRAFT_VERSION=${LATEST_VERSION}
+          fi
+
+          BUILD_EXISTS=`curl -s https://api.purpurmc.org/v2/${PROJECT}/${MINECRAFT_VERSION} | jq -r --arg BUILD ${BUILD_NUMBER} '.builds.all | tostring | contains($BUILD)' | grep true`
+          LATEST_BUILD=`curl -s https://api.purpurmc.org/v2/${PROJECT}/${MINECRAFT_VERSION} | jq -r '.builds.latest'`
+
+          if [ "${BUILD_EXISTS}" == "true" ]; then
+              echo -e "Build is valid for version ${MINECRAFT_VERSION}. Using build ${BUILD_NUMBER}."
+          else
+              echo -e "No valid build provided. Using latest build for version ${MINECRAFT_VERSION}."
+              BUILD_NUMBER=${LATEST_BUILD}
+          fi
+
+          JAR_NAME=${PROJECT}-${MINECRAFT_VERSION}-${BUILD_NUMBER}.jar
+
+          echo "Resolved download target"
+          echo -e "MC Version: ${MINECRAFT_VERSION}"
+          echo -e "Build: ${BUILD_NUMBER}"
+          echo -e "Artifact: ${JAR_NAME}"
+          DOWNLOAD_URL=https://api.purpurmc.org/v2/${PROJECT}/${MINECRAFT_VERSION}/${BUILD_NUMBER}/download
+      fi
+
+      cd /mnt/server
+
+      echo -e "Downloading: curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}"
+
+      if [ -f ${SERVER_JARFILE} ]; then
+          mv ${SERVER_JARFILE} ${SERVER_JARFILE}.old
+      fi
+
+      curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
+
+      if [ ! -f server.properties ]; then
+          echo -e "Downloading default server.properties"
+          curl -o server.properties https://raw.githubusercontent.com/parkervcp/eggs/master/minecraft/java/server.properties
+      fi
+
+      echo -e "Installation complete."
+    container: 'ghcr.io/parkervcp/installers:alpine'
+    entrypoint: ash
+variables:
+  -
+    sort: 1
+    name: 'Minecraft Version'
+    description: |-
+      Die Minecraft-Version, die heruntergeladen werden soll. Verwende „latest“, um immer die aktuelle
+      stabile Version zu beziehen. Ungültige Angaben werden automatisch auf die neueste Version gesetzt.
+    env_variable: MINECRAFT_VERSION
+    default_value: latest
+    user_viewable: true
+    user_editable: true
+    rules:
+      - required
+      - string
+      - 'max:20'
+  -
+    sort: 2
+    name: 'Server Jar File'
+    description: |-
+      Dateiname der Server-JAR. Standard ist „server.jar“. Ändere den Wert, wenn deine Datei anders
+      heißt.
+    env_variable: SERVER_JARFILE
+    default_value: server.jar
+    user_viewable: true
+    user_editable: true
+    rules:
+      - required
+      - 'regex:/^([\w\d._-]+)(\.jar)$/'
+      - 'max:80'
+  -
+    sort: 3
+    name: 'Build Nummer'
+    description: |-
+      Build-Nummer für die gewählte Purpur-Version. Belasse „latest“, um automatisch den neuesten
+      Build zu verwenden. Ungültige Angaben werden auf den neuesten Build gesetzt.
+    env_variable: BUILD_NUMMER
+    default_value: latest
+    user_viewable: true
+    user_editable: true
+    rules:
+      - required
+      - string
+      - 'max:20'
+  -
+    sort: 4
+    name: 'XMS RAM'
+    description: 'Anfangszuweisung (Xms) in MB. Empfohlen sind 25–50 % des maximalen RAM.'
+    env_variable: Sel_XMS
+    default_value: 512
+    user_viewable: true
+    user_editable: true
+    rules:
+      - 'in:128,256,512,1024,1536,2048,3072,4096,5120,6144,7168,8192,9216,10240,11264,12288'
+      - required
+      - numeric
+  -
+    sort: 5
+    name: 'Max. Spieler'
+    description: 'Maximale Anzahl gleichzeitiger Spieler auf dem Server.'
+    env_variable: MAX_PLAYER
+    default_value: 5
+    user_viewable: true
+    user_editable: true
+    rules:
+      - required
+      - numeric
+      - integer
+      - 'between:1,100'
+  -
+    sort: 6
+    name: MOTD
+    description: 'Server-MOTD. Kann durch Plugins dynamisch geändert werden.'
+    env_variable: MOTD
+    default_value: 'Hosted by RodinaMC.de'
+    user_viewable: true
+    user_editable: true
+    rules:
+      - string
+      - required
+      - 'in:RodinaMC.de ist peak,Join RodinaMC.de,Hosted by RodinaMC.de,lultwo hostet den Server,Optimiert von RodinaMC.de'
+  -
+    sort: 8
+    name: Zeitzone
+    description: 'IANA-Zeitzone, die an die JVM übergeben wird (z. B. Europe/Berlin).'
+    env_variable: ZONE
+    default_value: ''
+    user_viewable: true
+    user_editable: true
+    rules:
+      - string
+      - required
+      - 'in:UTC,Europe/Berlin,Europe/London,Europe/Paris,Europe/Madrid,Europe/Rome,Europe/Warsaw,Europe/Amsterdam,Europe/Prague,Europe/Bucharest,Europe/Helsinki,Europe/Athens,Europe/Istanbul,Europe/Moscow,Africa/Cairo,Africa/Johannesburg,Asia/Jerusalem,Asia/Dubai,Asia/Karachi,Asia/Kolkata,Asia/Dhaka,Asia/Bangkok,Asia/Singapore,Asia/Hong_Kong,Asia/Shanghai,Asia/Tokyo,Asia/Seoul,Australia/Sydney,Australia/Melbourne,Pacific/Auckland,America/St_Johns,America/Halifax,America/New_York,America/Toronto,America/Chicago,America/Mexico_City,America/Denver,America/Phoenix,America/Los_Angeles,America/Vancouver,America/Anchorage,Pacific/Honolulu,America/Sao_Paulo,America/Buenos_Aires,America/Santiago,America/Lima,America/Bogota'
+  -
+    sort: 7
+    name: 'Online Mode'
+    description: |-
+      Prüft Spieler-Accounts beim offiziellen Auth-Dienst. Hinter einer Proxy (Velocity/Waterfall) muss
+      dies auf „false“ stehen, die Authentifizierung übernimmt der Proxy.
+    env_variable: ONLINE_MODE
+    default_value: true
+    user_viewable: true
+    user_editable: true
+    rules:
+      - required
+      - boolean
+  -
+    sort: 9
+    name: 'Bug Report Link'
+    description: |-
+      Gibt eine URL an, auf die Spieler weitergeleitet werden, wenn der Spieler den "Report Bug" Button im
+      Pause Menü anklicken. (Ab 1.21 verfügbar!)
+    env_variable: BUG-LINK
+    default_value: ''
+    user_viewable: true
+    user_editable: true
+    rules:
+      - url
+      - string
+      - nullable
