@@ -8,7 +8,7 @@ Also known as **lultwo**, **lul.two**, or **Shastye.luca**.
 I don’t actively code as much as I used to.  
 Most of my work today is **AI-assisted**, focusing on structure, automation, and clean results rather than raw implementation.
 
-I strongly value **transparency** — in code, projects, and communities.
+I strongly value **transparency** in code, projects, and communities.
 
 ---
 
